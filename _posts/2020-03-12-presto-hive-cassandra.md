@@ -66,7 +66,7 @@ bin/launcher start
 
 Verify the presto UI
 
-![](/images/presto/presto-ui.png)
+![]({{ site.baseurl }}/images/presto/presto-ui.png)
 
 Query Tables from Hive and Cassandra.
 
@@ -87,10 +87,10 @@ group by c.occupation, c.gender
 order by c.occupation desc;
 ```
 
-![](/images/presto/query-results.png)
+![]({{ site.baseurl }}/images/presto/query-results.png)
 
 
 
 Presto Query Details in UI
 
-![](/images/presto/presto-query-details.png)
+![]({{ site.baseurl }}/images/presto/presto-query-details.png)

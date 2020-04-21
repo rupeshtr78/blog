@@ -36,7 +36,7 @@ image: '/images/awsemr/putty-emr-login.png'
 
   Test your application using Scala - ide using sample data.
 
-  ![](/images/awsemr/scala-ide01.png)
+  ![]({{ site.baseurl }}/images/awsemr/scala-ide01.png)
 
   
 
@@ -83,7 +83,7 @@ image: '/images/awsemr/putty-emr-login.png'
     ```
 
     - Verify the data is uploaded to s3 bucket
-    - ![](/images/awsemr/s3-upload-files.png)
+    - ![]({{ site.baseurl }}/images/awsemr/s3-upload-files.png)
 
 
 
@@ -104,16 +104,16 @@ image: '/images/awsemr/putty-emr-login.png'
   ```
 
   - Verify Cluster Creation
-  - ![](/images/awsemr/aws-emr01.png)
+  - ![]({{ site.baseurl }}/images/awsemr/aws-emr01.png)
 
   - **Step5**
 
   - Add SSH Inbound rule to security groups
-  - ![](/images/awsemr/aws-emr-securitygrp.png)
+  - ![]({{ site.baseurl }}/images/awsemr/aws-emr-securitygrp.png)
 
 - **Step 6**
 - ssh into emr master node
-- ![](/images/awsemr/putty-emr-login.png)
+- ![]({{ site.baseurl }}/images/awsemr/putty-emr-login.png)
 
 - Copy your driver program’s JAR file and any other files required.
 
@@ -121,7 +121,7 @@ image: '/images/awsemr/putty-emr-login.png'
   aws s3 cp s3://rupeshemr/Movies-1.0.jar ./
   ```
 
-  ![](/images/awsemr/aws-s3-cp-jar.png)
+  ![]({{ site.baseurl }}/images/awsemr/aws-s3-cp-jar.png)
 
 
 
@@ -135,16 +135,16 @@ image: '/images/awsemr/putty-emr-login.png'
 
 - Verify Results of top rated movies
   
-- ![](/images/awsemr/spark-submit-results.png)
+- ![]({{ site.baseurl }}/images/awsemr/spark-submit-results.png)
   
 - Use the Spark History Server UI to see the Spark Job History for submitted job
-- ![](/images/awsemr/spark-historyui01.png)
+- ![]({{ site.baseurl }}/images/awsemr/spark-historyui01.png)
 
-![](/images/awsemr/spark-historyui01-step1.png)
+![]({{ site.baseurl }}/images/awsemr/spark-historyui01-step1.png)
 
 - Verify Amazon s3 bucket for logs created for the job
 
-![](/images/awsemr/s3-emr-output.png)
+![]({{ site.baseurl }}/images/awsemr/s3-emr-output.png)
 
 
 

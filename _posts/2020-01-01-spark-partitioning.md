@@ -38,23 +38,23 @@ val movies = lines.map(x => (x.split("\t")(1).toInt, 1)) \
 val movieCounts = movies.reduceByKey( (x, y) => x + y ).saveAsTextFile("/home/hyper/spark/data/partition/hash");
 ```
 
-![](/images/partition/hash-spark.png)
+![]({{ site.baseurl }}/images/partition/hash-spark.png)
 
 As saveAsTextFile was used we can see the results split into 100 parts.
 
-![](/images/partition/hash-results-parts.png)
+![]({{ site.baseurl }}/images/partition/hash-results-parts.png)
 
 Verify individual files
 
-![](/images/partition/hash-part21.png)
+![]({{ site.baseurl }}/images/partition/hash-part21.png)
 
 **Spark UI Dag Visualization** 100 tasks were created based on hash parameter.
 
-![](/images/partition/hash-dag.png)
+![]({{ site.baseurl }}/images/partition/hash-dag.png)
 
 We can 100 tasks has been created.
 
-![](/images/partition/hash-100.png)
+![]({{ site.baseurl }}/images/partition/hash-100.png)
 
 
 
@@ -70,15 +70,15 @@ We can 100 tasks has been created.
   val lines = sc.textFile("ml-100k/u.data");
   val movies = lines.map(x => (x.split("\t")(1).toInt, 1))
   val range = movies.partitionBy(new RangePartitioner(10,movies))
-  val movieCounts = range.reduceByKey( (x, y) => x + y ).saveAsTextFile("/home/hyper/spark//images/partition/range");
+  val movieCounts = range.reduceByKey( (x, y) => x + y ).saveAsTextFile("/home/hyper/spark/{{ site.baseurl }}/images/partition/range");
   ```
 
   Results
 
-  ![](/images/partition/range-parts.png)
+  ![]({{ site.baseurl }}/images/partition/range-parts.png)
 
 
 
 **Spark UI Dag View** we can see 10 tasks we created as per the Range Partitioner parameter.
 
-![](/images/partition/range-dag.png)
+![]({{ site.baseurl }}/images/partition/range-dag.png)

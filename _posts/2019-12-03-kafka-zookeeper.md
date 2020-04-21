@@ -2,7 +2,7 @@
 layout: post
 title: Kafka Cluster
 tags: [kafka,cluster,mongodb]
-image: '/images/kafka/kafka-zk.png'
+image: '/images/kafka/Kafka-zk.png'
 ---
 
 > - Kafka is simply a collection of topics split into one or more partitions. 

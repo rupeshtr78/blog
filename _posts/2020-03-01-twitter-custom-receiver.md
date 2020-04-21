@@ -21,7 +21,7 @@ oauth.accessToken=XXXX
 oauth.accessTokenSecret=XXXX
 ```
 
-![](/images/twitter/twitter-dev-acc-png.png)
+![]({{ site.baseurl }}/images/twitter/twitter-dev-acc-png.png)
 
 
 
@@ -161,4 +161,4 @@ object TwitterMyFeed {
 
 Results
 
-![](/images/twitter/myfeedresult.png)
+![]({{ site.baseurl }}/images/twitter/myfeedresult.png)

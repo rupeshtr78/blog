@@ -46,7 +46,7 @@ You cannot write streams into these databases .We can write batches of data usin
 
 Verify data using db visualizer
 
-![](/images/jdbc/postgres-cars.png)
+![]({{ site.baseurl }}/images/jdbc/postgres-cars.png)
 
 
 
@@ -80,13 +80,13 @@ Verify data using db visualizer
 
 Verify Data Using MongoDb Compass
 
-![](/images/jdbc/mongo-compass-cars.png)
+![]({{ site.baseurl }}/images/jdbc/mongo-compass-cars.png)
 
 
 
 Read data from MongoDb Spark Sql
 
-![](/images/jdbc/mongo-spark-read.png)
+![]({{ site.baseurl }}/images/jdbc/mongo-spark-read.png)
 
 
 
@@ -108,7 +108,7 @@ Read data from MongoDb Spark Sql
   }
 ```
 
-![](/images/jdbc/cassandra-cqlsh.png)
+![]({{ site.baseurl }}/images/jdbc/cassandra-cqlsh.png)
 
 
 

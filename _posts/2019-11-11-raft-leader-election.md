@@ -59,11 +59,11 @@ cd first-network
 
 Make sure the the genesis block , channel config is created with orderer type = etcdraft.
 
-![](/images/raft/genesisblock.png)
+![]({{ site.baseurl }}/images/raft/genesisblock.png)
 
 For this exercise we will create a simple grafana dashboard to see the cluster size and number of active nodes and the current raft leader by channel.
 
-![](/images/raft/grafana01.png)
+![]({{ site.baseurl }}/images/raft/grafana01.png)
 
 ```
  Elected leader 3 at term 2 channel=mychannel
@@ -156,7 +156,7 @@ Lets simulate a node failure by stopping the Node3 which is the leader for mycha
 - We can see the number of nodes active is now 4.
 - And the **new leader** has been elected **Node1** which is orderer.example.com.
 
-![](/images/raft/newleader.png)
+![]({{ site.baseurl }}/images/raft/newleader.png)
 
 Lets inspect the docker logs orderer.example.com.
 
@@ -224,13 +224,13 @@ docker-compose -f docker-compose-prom.yaml up -d
 
 Make sure the Prometheus is running after the deployment. http://serverIP:9090/graph
 
-![](/images/raft/prometheus.png)
+![]({{ site.baseurl }}/images/raft/prometheus.png)
 
 Now lets configure grafana
 
 Add Prometheus as data source to grafana . http://serverIP:3000/datasources
 
-![](/images/raft/datasource.png)
+![]({{ site.baseurl }}/images/raft/datasource.png)
 
 We will create a simple grafana dashboard. 
 
@@ -240,7 +240,7 @@ consensus_etcdraft_cluster_size{channel="byfn-sys-channel"}
 count(consensus_etcdraft_is_leader{channel="byfn-sys-channel"})
 ```
 
-![](/images/raft/grafana01.png)
+![]({{ site.baseurl }}/images/raft/grafana01.png)
 
 
 

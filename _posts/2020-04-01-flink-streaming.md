@@ -52,19 +52,19 @@ Flink WebUI Can be accessed from http://localhost:8081
 
 Jobs Section shows job details with DAG
 
-![](/images/flink/jobs-dag.png)
+![]({{ site.baseurl }}/images/flink/jobs-dag.png)
 
-![](/images/flink/jobs-timeline.png)
+![]({{ site.baseurl }}/images/flink/jobs-timeline.png)
 
 Task Manager Details
 
-![](/images/flink/teask-manager.png)
+![]({{ site.baseurl }}/images/flink/teask-manager.png)
 
 
 
 Results are printed to Console
 
-![](/images/flink/intellij.png)
+![]({{ site.baseurl }}/images/flink/intellij.png)
 
 
 

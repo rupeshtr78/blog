@@ -37,7 +37,7 @@ kafka/bin/kafka-topics.sh  --create --zookeeper XXX.168.1.XXX:2181 \
 
 ## Verify Topics Using kafka Tool
 
-![](/images/spark/kafka-tool.png)
+![]({{ site.baseurl }}/images/spark/kafka-tool.png)
 
 
 
@@ -52,7 +52,7 @@ kafka/bin/kafka-console-producer.sh --broker-list\
 192.168.1.181:9092,192.168.1.182:9092,192.168.1.182:9092 --topic streams-spark-input3
 ```
 
-![](/images/spark/access-log.png)
+![]({{ site.baseurl }}/images/spark/access-log.png)
 
 
 
@@ -180,7 +180,7 @@ def writeToCassandra(): Unit = {
 cqlsh:hyper> select * from kafkalogsdate;
 ```
 
-![](/images/spark/cassandra-sql.png)
+![]({{ site.baseurl }}/images/spark/cassandra-sql.png)
 
 
 
@@ -221,4 +221,4 @@ kafka/bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.181:9092,192.16
  --topic streams-spark-output --partition 0 --from-beginning
 ```
 
-![](/images/spark/writekafka.png)
+![]({{ site.baseurl }}/images/spark/writekafka.png)

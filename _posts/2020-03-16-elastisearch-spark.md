@@ -137,29 +137,29 @@ Verify Index creation in Elastisearch
 curl -XGET "http://XXX.168.1.XXX:9200/_cat/indices"
 ```
 
-![](/images/kibana/cat_indices.png)
+![]({{ site.baseurl }}/images/kibana/cat_indices.png)
 
 #### Kibana
 
 Kibana webUI under Settings Create Index Pattern.
 
-![](/images/kibana/index-pattern.png)
+![]({{ site.baseurl }}/images/kibana/index-pattern.png)
 
 Kibana Discover Tab View the Raw data and verify data injected in real time
 
-![](/images/kibana/kibana-raw-data.png)
+![]({{ site.baseurl }}/images/kibana/kibana-raw-data.png)
 
 #### Kibana Real Time Visualization 
 
 Visualize extracted error codes from the Web logs and monitor error codes in real time.
 
-![](/images/kibana/error-stats.png)
+![]({{ site.baseurl }}/images/kibana/error-stats.png)
 
 ##### Example of Visualizations in Kibana
 
 Based on cars data plot of horse power vs MPG
 
-![](/images/kibana/avghp-mpg.png)
+![]({{ site.baseurl }}/images/kibana/avghp-mpg.png)
 
 
 

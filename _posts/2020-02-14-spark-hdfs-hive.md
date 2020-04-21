@@ -58,7 +58,7 @@ hdsf dfs -ls /user/hyper/ml-100k
 
 http://192.168.1.131:9870
 
-![](/images/hivehdfs/hdfs-dir.png)  
+![]({{ site.baseurl }}/images/hivehdfs/hdfs-dir.png)  
 
 
 
@@ -116,7 +116,7 @@ spark-submit \
 sparkhdfshive_2.12-0.1.jar
 ```
 
-![](/images/hivehdfs/hadoops-app.png)
+![]({{ site.baseurl }}/images/hivehdfs/hadoops-app.png)
 
 
 
@@ -136,7 +136,7 @@ Time taken: 0.136 seconds, Fetched: 4 row(s)
 
 ```
 
-![](/images/hivehdfs/hive-select.png)
+![]({{ site.baseurl }}/images/hivehdfs/hive-select.png)
 
 
 
@@ -157,7 +157,7 @@ Found 2 items
 
 ```
 
-![](/images/hivehdfs/hive-warehouse.png)
+![]({{ site.baseurl }}/images/hivehdfs/hive-warehouse.png)
 
 
 
@@ -175,7 +175,7 @@ spark.history.fs.update.interval  10s
 spark.history.ui.port             18080
 ```
 
-![](/images/hivehdfs/spark-history.png)
+![]({{ site.baseurl }}/images/hivehdfs/spark-history.png)
 
 ## Hive Start Commands
 

@@ -27,36 +27,36 @@ cd build/env/bin/
 
 ##### Oozie Workflow Designer
 
-![](/images/hue/oozie-movies.png)
+![]({{ site.baseurl }}/images/hue/oozie-movies.png)
 
-![](/images/hue/ozzie-wf-xml.png)
+![]({{ site.baseurl }}/images/hue/ozzie-wf-xml.png)
 
 ##### Launch Oozie Workflow
 
 
 
-![](/images/hue/ozzie-submit-movies.png)
+![]({{ site.baseurl }}/images/hue/ozzie-submit-movies.png)
 
 
 
 ##### Monitor Jobs Workflow , Schedules  ,Bundles 
 
-![](/images/hue/oozie-jobs.png)
+![]({{ site.baseurl }}/images/hue/oozie-jobs.png)
 
 
 
 Veify Job launched from Hue in Oozie webUI
 
-![](/images/hue/ozzie-dag.png)
+![]({{ site.baseurl }}/images/hue/ozzie-dag.png)
 
 
 
 ##### Hive Query
 
-![](/images/hue/hue-hive-sql.png)
+![]({{ site.baseurl }}/images/hue/hue-hive-sql.png)
 
 ##### 
 
 ##### HDFS File Browser
 
-![](/images/hue/hue-file-browser.png)
+![]({{ site.baseurl }}/images/hue/hue-file-browser.png)
