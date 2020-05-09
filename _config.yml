@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Rupesh Raghavan
-email: ""
-description: ""
+title: RTR IR5 Blog
+email: "rupeshtr@gmail.com"
+description: "Rupesh Raghavan"
 baseurl: "/blog" # The subpath of your site, e.g. /blog
 url: "" # The base hostname & protocol for your site
 twitter: ""
-github: "rupeshtr78"
+github: "https://github.com/rupeshtr78"
 instagram: ""
 facebook: ""
 
