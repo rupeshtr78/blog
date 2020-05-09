@@ -5,11 +5,11 @@ tags: [Kubernetes,Docker,blockchain,cluster]
 image: '/images/kafkadocker/KAFKA-MASTER.png'
 ---
 
-This article will configure kafka zookeeper cluster and leader election process. We will configure a hyperledger blockchain using kafka cluster to explore this topic.
+This article will configure kafka zookeeper cluster and explore the leader election process. We will configure a hyperledger blockchain using kafka cluster to understand this topic.
 
-In this deployment We will configure Multi Node Apache Kafka/Zookeeper Cluster with 3 zookeeper nodes and 4 kafka nodes. After deployment we will use kafka related commands and Gui tools to verify the cluster has created the topics as per the fabric model we configured. We will verify the leader election process as well.
+In this deployment We will standup Multi Node Apache Kafka/Zookeeper Cluster with 3 zookeeper nodes and 4 kafka nodes. After deployment we will use kafka related commands and Gui tools to verify the cluster has created the topics as per the model we configured. Finally we will verify the leader election process by bringing down one of the nodes.
 
-We will be deploying the Hyperledger Fabric network consisting of two organization, maintaining two peers each, there orderers with ‘**kafka**’ ordering service. We will create a channel , join peers to the channel , install chaincode on peer and instantiate chaincode on channel. Also invoke transactions against the deployed chaincode.
+We will be deploying the Hyperledger Blockchain network consisting of two organization, maintaining two peers each, there orderers using Docker and then  deploy the ‘**kafka**’ ordering service deployed on VM. We will create a channel , join peers to the channel , install chaincode on peer and instantiate chaincode on channel. Also invoke transactions against the deployed chaincode.
 
 ![]({{ site.baseurl }}/images/kafkadocker/KAFKA-ZOOKEEPER.png)
 
