@@ -32,3 +32,19 @@
 
 // TRUMPS
 @import 'trumps/_all';
+
+table, th, td {
+    border: 1px solid black;
+    text-align: left;
+    width: 100%;
+  }
+
+th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+tbody tr:nth-child(odd) {
+    background: #eee;
+    text-align: left;
+  }
