@@ -48,7 +48,7 @@ Raft decomposes the consensus problem into three relatively independent sub prob
 
 In this article we try to understand the how to election process in raft works by deploying Hyperledger Fabric blockchain 
 
-We will use the samples example in their first network using with raft ordering service. 
+We will use the Hyperledger Blockchain samples example in their first network using with raft ordering service. 
 
 ```bash
 cd first-network
@@ -94,57 +94,103 @@ Based on above steps lets see how the orderer3 became the leader for mychannel f
 
 docker logs orderer3.example.com
 
-```bash
-#Step0 Node3 starts election becomes Pre-Candidate
+- **Step0 Node3 starts election becomes Pre-Candidate**
+
+```
 Step -> INFO 048 3 is starting a new election at term 1 channel=mychannel node=3
 becomePreCandidate -> INFO 049 3 became pre-candidate at term 1 channel=mychannel node=3
 poll -> INFO 04a 3 received MsgPreVoteResp from 3 at term 1 channel=mychannel node=3
+```
 
-#Step2 Node3 Sends MsgPreVote to all nodes in cluster.
+- **Step2 Node3 Sends MsgPreVote to all nodes in cluster.**
+
+```
 campaign -> INFO 04b 3 [logterm: 1, index: 5] sent MsgPreVote request to 1 at term 1 channel=mychannel node=3
 campaign -> INFO 04c 3 [logterm: 1, index: 5] sent MsgPreVote request to 2 at term 1 channel=mychannel node=3
 campaign -> INFO 04d 3 [logterm: 1, index: 5] sent MsgPreVote request to 4 at term 1 channel=mychannel node=3
 campaign -> INFO 04e 3 [logterm: 1, index: 5] sent MsgPreVote request to 5 at term 1 channel=mychannel node=3
+```
 
-#Node 3 Starts Receving Response from other Nodes
+- **Node 3 Starts Receiving Response from other Nodes**
+
+```
 poll -> INFO 04f 3 received MsgPreVoteResp from 5 at term 1 channel=mychannel node=3
 stepCandidate -> INFO 050 3 [quorum:3] has received 2 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
 poll -> INFO 051 3 received MsgPreVoteResp from 2 at term 1 channel=mychannel node=3
+```
 
-#Step3 Node3 receives majority 3 / 5 MsgPreVoteResp from all nodes
+- **Step3 Node3 receives majority 3 / 5 MsgPreVoteResp from all nodes**
+
+```
 stepCandidate -> INFO 052 3 [quorum:3] has received 3 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+```
 
-# Step4 Node3 incrementes term 1 to term 2 becomes candidate.
+
+
+- **Step4 Node3 increments term 1 to term 2 becomes candidate.**
+
+```
 becomeCandidate -> INFO 053 3 became candidate at term 2 channel=mychannel node=3
-# Step5 Node3 votes for itself
-poll -> INFO 054 3 received MsgVoteResp from 3 at term 2 channel=mychannel node=3
+```
 
-# Step6 Node3 sends MsgVote request to to other nodes.
+
+- **Step5 Node3 votes for itself**
+
+```
+poll -> INFO 054 3 received MsgVoteResp from 3 at term 2 channel=mychannel node=3
+```
+
+
+
+- **Step6 Node3 sends MsgVote request to to other nodes.**
+
+```
 campaign -> INFO 055 3 [logterm: 1, index: 5] sent MsgVote request to 1 at term 2 channel=mychannel node=3
 campaign -> INFO 056 3 [logterm: 1, index: 5] sent MsgVote request to 2 at term 2 channel=mychannel node=3
 campaign -> INFO 057 3 [logterm: 1, index: 5] sent MsgVote request to 4 at term 2 channel=mychannel node=3
 campaign -> INFO 058 3 [logterm: 1, index: 5] sent MsgVote request to 5 at term 2 channel=mychannel node=3
+```
 
-# Step7  Node 3 starts receving MsgVoteResp from other nodes
+
+
+- **Step7  Node 3 starts receiving MsgVoteResp from other nodes**
+
+```
 poll -> INFO 059 3 received MsgVoteResp from 4 at term 2 channel=mychannel node=3
 stepCandidate -> INFO 05a 3 [quorum:3] has received 2 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
 poll -> INFO 05b 3 received MsgVoteResp from 5 at term 2 channel=mychannel node=3
+```
 
-# Step8 Node3 receives majority votes 3 / 5 
+
+
+- **Step8 Node3 receives majority votes 3 / 5** 
+
+```
 stepCandidate -> INFO 05c 3 [quorum:3] has received 3 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+```
 
-# Step9 Node3 becomes elected as leader
+
+
+- **Step9 Node3 becomes elected as leader**
+
+```
 becomeLeader -> INFO 05d 3 became leader at term 2 channel=mychannel node=3
 
 run -> INFO 05e raft.node: 3 elected leader 3 at term 2 channel=mychannel node=3
 run -> INFO 05f Leader 3 is present, quit campaign channel=mychannel node=3
 serveRequest -> INFO 060 Raft leader changed: 0 -> 3 channel=mychannel node=3
+```
 
-# Step10 Node3 starts receiving requests as leader
-serveRequest -> INFO 061 Start accepting requests as Raft leader at block [0] channel=mychannel node=3
-propose -> INFO 062 Created block [1], there are 0 blocks in flight channel=mychannel node=3
+
+
+- **Step10 Node3 starts receiving requests as leader**
 
 ```
+serveRequest -> INFO 061 Start accepting requests as Raft leader at block [0] channel=mychannel node=3
+propose -> INFO 062 Created block [1], there are 0 blocks in flight channel=mychannel node=3
+```
+
+
 
 
 
