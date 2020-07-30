@@ -59,10 +59,41 @@ AWS Services Used in this exercise.
 6. Unzip connect_device_package.zip
 7. ./start.sh
 8. Subscribe the message topic under the test section in IOT core verify the communication with device. See the messages published under test section in IOT core.
-9. Create your publish script and run the below command to run myPubSub.py which reads from a text file and send a json payload to the specified topic using MQTT publish subscribe protocol.
+9. Create your publish script and run the below command to run myPubSub.py which reads from a text file and send a **json** payload to the specified topic using MQTT publish subscribe protocol.
+
+```python
+    def mqttPublishLines(buttonPin):
+        publish_count = 1
+        filepath = "/home/pi/awsiot/mqtt/data/speeding_data.csv"
+        file = open(filepath, "r")
+        #line = file.readlines()
+        line = file.read().splitlines()
+        while (publish_count <= args.count) or (args.count == 0):
+            if GPIO.input(buttonPin)==GPIO.LOW:
+                payload = {"iottimestamp":str(datetime.utcnow()),
+                            "licensePlate":line[publish_count].split(",")[0],
+                            "longitude":line[publish_count].split(",")[1],
+                            "latitude":line[publish_count].split(",")[2],
+                            "city":line[publish_count].split(",")[3],
+                            "state":line[publish_count].split(",")[4],
+                            "speed":line[publish_count].split(",")[5] }
+                message = json.dumps(payload)
+                print("Button Pressed", publish_count)
+                GPIO.output(lightPin, True)
+                mqtt_connection.publish(
+                topic=args.topic,
+                payload=message,
+                qos=mqtt.QoS.AT_LEAST_ONCE)
+                time.sleep(1)
+                publish_count += 1
+            else:
+                GPIO.output(lightPin, False)
+
+    GPIO.add_event_detect(buttonPin,GPIO.BOTH,callback=mqttPublishLines,bouncetime=300)
+```
 
 ```shell
-python myPubSub.py --endpoint xxxxxxx.iot.us-east-2.amazonaws.com --root-ca root-CA.crt --cert RTRPIIOT.cert.pem --key RTRPIIOT.private.key --client-id basicPubSub --topic rtr/iot/trafficdata --count 0
+python iotPubSub.py --endpoint xxxxxxx.iot.us-east-2.amazonaws.com --root-ca root-CA.crt --cert RTRPIIOT.cert.pem --key RTRPIIOT.private.key --client-id basicPubSub --topic rtr/iot/trafficdata --count 0
 ```
 
 ![]({{ site.baseurl }}/images/awsbigdata/rpilogs.png)

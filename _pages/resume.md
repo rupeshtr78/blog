@@ -18,9 +18,9 @@ title: Professional Summary
 - Experienced in data engineering including databases, data integration, data mining, big data.
 - AWS Certified in Machine Learning Specialty. 
 - Exposure in building Big Data technologies and utilities( Hadoop, Map Reduce Framework, Hive, Sqoop, Pig , Hue,spark, zeppelin, yarn , kafka , zookeeper)
-- Working Knowledge of AWS Services Kinesis , Glue , EMR Spark, S3 Buckets, AWS Sage maker , AWS Lambda. Amazon Elastic Compute Cloud (Amazon EC2) etc.
+- Knowledge of AWS Big Data Services IOT Core,Kinesis Streams, Firehose, Analytics, AWS RedShift,AWS EMR,AWS Lambda, AWS SNS,AWS Glue ETL,Crawler,Spark,DynamoDB,DynamoDB Streams,EC2 
 - Working Knowledge of Spark Core, Spark Streaming, Spark SQL for real time data processing. 
-  Experience in generating time series Forecast performing Hands-on data analytics , Building and maintaining the infrastructure and data pipelines required for  optimal extraction, transformation, and loading of data from a wide  variety of data sources.
+- Experience in generating time series Forecast performing Hands-on data analytics , Building and maintaining the infrastructure and data pipelines required for  optimal extraction, transformation, and loading of data from a wide  variety of data sources.
 - Experience in multiple business domains spanning Clothing, Retail ,Manufacturing, Mobile , Paper Pulp, Paper Products and Automotive Aftermarket.
 - Experience with the business process activities and embed end-to-end model development and deployment into automated CICD workflows .
 - Ability to learn new tools quickly as needed to provide new ideas for solving problems
@@ -36,22 +36,22 @@ title: Professional Summary
 
 **Skill Set**
 
-| Skills                                   | Reference                                                |
-| :--------------------------------------- | -------------------------------------------------------- |
-| AWS Big Data                             | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Spark , Spark Streaming                  | [Github](https://github.com/rupeshtr78/spark-streaming)  |
-| Hadoop , Hive , Yarn , Mapreduce , Pig   | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Hue , Presto , Flink ,ElastiSearch ,SQL  | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Kafka Zookeeper                          | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Mongo dB , Cassandra , PostGres , Oracle | [Blog](https://rupeshtr78.github.io/blog/)               |
-| AWS EMR With Spark                       | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Jupyter Notebook , Zeppelin              | [Github](https://github.com/rupeshtr78/machine_learning) |
-| Data Analytics , Statistics              | [Github](https://github.com/rupeshtr78/machine_learning) |
-| Machine Learning / TensorFlow            | [Github](https://github.com/rupeshtr78/machine_learning) |
-| Docker , Kubernetes                      | [Blog](https://rupeshtr78.github.io/blog/)               |
-| MQTT / IOT                               | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Python , Scala , Java                    | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Oracle linux, Centos , Debian            |                                                          |
+| Skills                                         | Reference                                                |
+| :--------------------------------------------- | -------------------------------------------------------- |
+| AWS Big Data                                   | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Spark , Spark Streaming                        | [Github](https://github.com/rupeshtr78/spark-streaming)  |
+| Hadoop , Hive , Yarn , Mapreduce , Pig         | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Hue , Presto , Flink ,ElastiSearch ,SQL        | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Kafka Zookeeper                                | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Mongo dB , Cassandra , PostGres , Oracle       | [Blog](https://rupeshtr78.github.io/blog/)               |
+| AWS EMR With Spark                             | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Jupyter Notebook , Zeppelin                    | [Github](https://github.com/rupeshtr78/machine_learning) |
+| Data Analytics , Statistics                    | [Github](https://github.com/rupeshtr78/machine_learning) |
+| Machine Learning / TensorFlow                  | [Github](https://github.com/rupeshtr78/machine_learning) |
+| Docker , Kubernetes                            | [Blog](https://rupeshtr78.github.io/blog/)               |
+| MQTT / IOT                                     | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Python , Scala , Java                          | [Blog](https://rupeshtr78.github.io/blog/)               |
+| Oracle linux, Centos , Debian , Windows Server |                                                          |
 
 
 
@@ -78,22 +78,22 @@ Experience
 - Data cleansing and exploratory data analysis in determining the right combination of factors for forecasting by analyzing unstructured data line Retail Price from CRM.
 - Installed and configured 5 node HDP 2.3 Hadoop , Spark cluster.
 - Provide overall architect responsibilities including roadmaps, leadership, planning, technical innovation, security, data governance etc.
-- Extraction of source data from multiple legacy applications and heterogeneous technologies such as mainframes z/OS, mainframe DB2 LUW based, SQL Servers files into HDFS Ingestion Zone using the Sqoop, DataStage jobs and Spark jobs.
+- Extraction of source data from multiple legacy applications and heterogeneous technologies ,SQL Servers files into HDFS Ingestion Zone using the Sqoop, DataStage jobs and Spark jobs.
 - Extraction of source files (.csv) files into Cassandra cluster using the batch Spark job 
   Develop mappings to extract data from different sources such as OS, database, middleware and custom application logs load into data warehouse.
 - Design and implementation of Real time sales and operations planning constraining forecast for production capacity for Aluminum Cans business vertical. 
 - Designed solution for new product introduction by leveraging similar items 
 
-**Employer** : ForSynet Inc
+**Employer** : Chain Sys Corporation
 
-**Role** : Oracle Advanced Supply Chain Planning , Demantra Consultant.
+**Role** : Advanced Supply Chain Planning , Demantra Consultant.
 
 **Dates** : Sep 2006 – 2012
 
 - Business process mapping with all standard and customized modules. 
 - Design test scripts of all sub-process identified in assessment phase. 
 - Unit testing execution for each business process. 
-- Design and implement integration with 3rd Parties and legacy systems. 
+- Design and implement integration with multiple data sources. 
 - Successfully implemented complex shipping with Trips forecasting, multi delivery points, container management and lot/serialization. Freight charge calculation. 
 
 
