@@ -247,6 +247,12 @@ Verify the Kinesis Firehose Data Put records using Kinesis Analytics
 
 ![]({{ site.baseurl }}/images/awsbigdata/dynamodb-stream-kinesis-analytics.png)
 
-**Refer to the below git for data and code**
+**References**
 
-https://github.com/rupeshtr78/awsiot.git
+- **Refer the git for data and code**
+- https://github.com/rupeshtr78/awsiot.git
+- Data Generated Using Python Faker package.
+- Reccomended Course [AWS Certified Data Analytics Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-big-data/)
+- [Stephane Maarek ](https://www.udemy.com/user/stephane-maarek/)
+- [Frank Kane](https://www.udemy.com/user/frank-kane-2/)
+

@@ -38,6 +38,7 @@ title: Professional Summary
 
 | Skills                                   | Reference                                                |
 | :--------------------------------------- | -------------------------------------------------------- |
+| AWS Big Data                             | [Blog](https://rupeshtr78.github.io/blog/)               |
 | Spark , Spark Streaming                  | [Github](https://github.com/rupeshtr78/spark-streaming)  |
 | Hadoop , Hive , Yarn , Mapreduce , Pig   | [Blog](https://rupeshtr78.github.io/blog/)               |
 | Hue , Presto , Flink ,ElastiSearch ,SQL  | [Blog](https://rupeshtr78.github.io/blog/)               |
