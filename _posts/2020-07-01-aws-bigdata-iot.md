@@ -92,6 +92,8 @@ AWS Services Used in this exercise.
  GPIO.add_event_detect(buttonPin,GPIO.BOTH,callback=mqttPublishLines,bouncetime=300)
 ```
 
+
+
 ```shell
 python iotPubSub.py --endpoint xxxxxxx.iot.us-east-2.amazonaws.com --root-ca root-CA.crt --cert RTRPIIOT.cert.pem --key RTRPIIOT.private.key --client-id basicPubSub --topic rtr/iot/trafficdata --count 0
 ```
@@ -283,18 +285,14 @@ Verify the Kinesis Firehose Data Put records using Kinesis Analytics
 - **Refer the git for data and code**
 
 - https://github.com/rupeshtr78/awsiot.git
-
 - Data Generated Using Python Faker package.
-
 - Recommended Courses 
-
   - [AWS Certified Data Analytics Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-big-data/)
-
   - [Stephane Maarek ](https://www.udemy.com/user/stephane-maarek/)
 
   - [Frank Kane](https://www.udemy.com/user/frank-kane-2/)
 
   - https://rockthejvm.com
 
-    
+
 
