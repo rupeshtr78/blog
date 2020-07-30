@@ -5,11 +5,11 @@ tags: [iot,aws,spark,kinesis,redshift,emr,DynamoDB,jekyll]
 image: '/images/awsbigdata/awsbigdata.png'
 ---
 
-Business case use AWS Big data services to process streaming data from IOT device.
+Business case :Use AWS Big data services to process streaming data from IOT device.
 
-Iot device in this example will detect the license plate and speed of vehicles, send these data streams into AWS for further processing.
+An Iot device will publish the license plate and clocked speed of vehicles as data streams into AWS for further processing.
 
-AWS Spark job will filter the cars above speed limit ,Look up the driver information stored in Redshift data warehouse and eventually sends a SNS text message alert to the registered owner of the vehicle in real time.
+AWS Spark job will filter the cars above speed limit ,Look up the vehicle owner information stored in Redshift data warehouse and eventually sends a SNS text message alert to the registered owner of the vehicle in real time.
 
 AWS Services Used in this exercise.
 
@@ -27,24 +27,24 @@ AWS Services Used in this exercise.
 **IOT Data Flow**
 
 1. Simulate the IOT device using a raspberry pi .Register the device with AWS IOT Core. 
-2. IOT device when a button is pressed on breadboard will have a callback function to do a MQTT publish and sends the license plate and speed to AWS IOT Gateway.(NO image capturing mechanism publish script will read from a file and publish the data(licensePlate, longitude, latitude,city,state,speed).
+2. On the IOT device when a button is pressed on breadboard will do a callback function to create a MQTT publish which sends the license plate and speed to AWS IOT Gateway.(NO image capturing mechanism publish script will read from a file and publish the data(licensePlate, longitude, latitude,city,state,speed).
 3. Define IOT Rules in AWS IOT core to send the data to Kinesis Stream
 4. AWS Emr Spark cluster will read the data from Kinesis Stream.
    1. Filter the speeding cars ,
    2. Lookup the driver information from Redshift  based on license plate and 
    3. Put records to outgoing kinesis stream with driver name and phone number information.
-   4. Also the data will be written to a DynamoDB Table.
-5. AWS Lambda function will read this streaming data from Kinesis and send to SNS topic 
-6. SNS will send the SMS message to the phone number of the driver registered with the license plate.
+   4. Raw data will be written to a DynamoDB Table.
+5. AWS Lambda function will read this streaming data from Kinesis and publish to AWS SNS topic 
+6. SNS will send the SMS message to the phone number of the owner registered with the license plate.
 
 ![]({{ site.baseurl }}/images/awsbigdata/snsmessage.png)
 
 **Redshift Data Flow**
 
-1. We will use AWS Kinesis agent to read and the driver data and put records to Kinesis Firehose. (first_name, last_name, licensePlate, email,address, city,state,zipcode,phoneNumber,myphone) 
+1. We will use AWS Kinesis agent to read and the driver data from csv and put records to Kinesis Firehose. (first_name, last_name, licensePlate, email,address, city,state,zipcode,phoneNumber,myphone) 
 2. Use Kinesis Firehose to load the data to S3 Bucket
-3. Use AWS Glue crawler , Glue ETL Job to load the data into Redshift Cluster using jdbc.
-4. The vehicle owner data in Redshift will be used by AWS EMR Spark to join using the license plate streaming data of speeding vehicles.
+3. Use AWS Glue crawler , Glue ETL Job to load the data from S3 into Redshift Cluster using jdbc.
+4. The vehicle owner data in Redshift will be joined by the license plate from streaming data of speeding vehicles by AWS EMR Spark .
 
 ![]({{ site.baseurl }}/images/awsbigdata/redshit-query-results-raw.png)
 
@@ -247,3 +247,6 @@ Verify the Kinesis Firehose Data Put records using Kinesis Analytics
 
 ![]({{ site.baseurl }}/images/awsbigdata/dynamodb-stream-kinesis-analytics.png)
 
+**Refer to the below git for data and code**
+
+https://github.com/rupeshtr78/awsiot.git
