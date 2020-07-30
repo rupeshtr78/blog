@@ -37,7 +37,7 @@ AWS Services Used in this exercise.
 5. AWS Lambda function will read this streaming data from Kinesis and publish to AWS SNS topic 
 6. SNS will send the SMS message to the phone number of the owner registered with the license plate.
 
-![]({{ site.baseurl }}/images/awsbigdata/snsmessage.png)
+![SMS Message From AWS]({{ site.baseurl }}/images/awsbigdata/snsmessage.png)
 
 **Redshift Data Flow**
 
@@ -250,9 +250,20 @@ Verify the Kinesis Firehose Data Put records using Kinesis Analytics
 **References**
 
 - **Refer the git for data and code**
+
 - https://github.com/rupeshtr78/awsiot.git
+
 - Data Generated Using Python Faker package.
-- Reccomended Course [AWS Certified Data Analytics Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-big-data/)
-- [Stephane Maarek ](https://www.udemy.com/user/stephane-maarek/)
-- [Frank Kane](https://www.udemy.com/user/frank-kane-2/)
+
+- Recommended Courses 
+
+  - [AWS Certified Data Analytics Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-big-data/)
+
+  - [Stephane Maarek ](https://www.udemy.com/user/stephane-maarek/)
+
+  - [Frank Kane](https://www.udemy.com/user/frank-kane-2/)
+
+  - https://rockthejvm.com
+
+    
 

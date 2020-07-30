@@ -51,7 +51,7 @@ title: Professional Summary
 | Docker , Kubernetes                      | [Blog](https://rupeshtr78.github.io/blog/)               |
 | MQTT / IOT                               | [Blog](https://rupeshtr78.github.io/blog/)               |
 | Python , Scala , Java                    | [Blog](https://rupeshtr78.github.io/blog/)               |
-| Oracle linux, Centos , Oracle Linux      |                                                          |
+| Oracle linux, Centos , Debian            |                                                          |
 
 
 
