@@ -92,7 +92,7 @@ AWS Services Used in this exercise.
  GPIO.add_event_detect(buttonPin,GPIO.BOTH,callback=mqttPublishLines,bouncetime=300)
 ```
 
-
+Run Publish python script from IOT Device.
 
 ```shell
 python iotPubSub.py --endpoint xxxxxxx.iot.us-east-2.amazonaws.com --root-ca root-CA.crt --cert RTRPIIOT.cert.pem --key RTRPIIOT.private.key --client-id basicPubSub --topic rtr/iot/trafficdata --count 0
@@ -119,8 +119,8 @@ Spark job reads and processes the kinesis stream data as DStreams.
 Provide DynamoDB table as checkpoint location in checkpointAppName parameter
 
 ```scala
-    // Kinesis DStreams  create 1 Kinesis Receiver/input DStream for each shard
-    val kinesisStreams = (0 until numStreams).map { i =>
+// Kinesis DStreams  create 1 Kinesis Receiver/input DStream for each shard
+ val kinesisStreams = (0 until numStreams).map { i =>
       KinesisInputDStream.builder
         .streamingContext(ssc)
         .endpointUrl(endpointUrl)
@@ -131,18 +131,18 @@ Provide DynamoDB table as checkpoint location in checkpointAppName parameter
         .checkpointInterval(kinesisCheckpointInterval)
         .storageLevel(StorageLevel.MEMORY_AND_DISK_2)
         .build()
-    }
+  }
 ```
 
 Method to Get Vehicle owner data from Redshift based on License Plate
 
 ```scala
-  def getDriverData(licenseplate:String) = {
+def getDriverData(licenseplate:String) = {
     val url = "jdb:url"
     val user = "awsuser"
     val redShifTable = "public.rtr_iot_driver_data"
 
-    // Get some data from a Redshift table
+    // Get owner data from a Redshift table
     val driverDf = spark.read
       .format("jdbc")
       .option("url",url)
@@ -172,11 +172,17 @@ val speedingVehicles = payLoadDs.filter(col("speed")>75)
 ```scala
 licensePlateDF.foreach(plate => {
  println("Speeding plate",plate)
+    
  val driverData = getDriverData(plate)
+    
+// join condition between redshift df and streaming df   
  val joinCondition = speedingVehicles.col("licensePlate") === driverData.col("licenseplate")
+    
+// join the data frames using joinCondition
  val speedingDriver = speedingVehicles.join(driverData, joinCondition, "inner").drop(driverData.col("licenseplate"))
- println("Speeding driver details after df join")
+ println("Speeding driver details after df join")  
  speedingDriver.show()
+    
  val data = speedingDriver.toJSON.map(row => row.toString).collect()(0)
  println("Speedign Drive Data toJson ",data)
  val kinesisOutStream = "rtr-iot-kinesis-out-stream"
@@ -221,17 +227,19 @@ Create AWS Lambda Function to Read from Kinesis Stream and Publish to SNS Topic.
 AWS Lambda Python Code Reads Stream Data and Publishes to SNS Topic,with Phone number from data stream passed as Endpoint argument.
 
 ```python
-        phoneNumber = parsedPayload["myphone"]
-        e164phoneNumber = '+1'+phoneNumber
+phoneNumber = parsedPayload["myphone"]
+e164phoneNumber = '+1'+phoneNumber
      
-        message_sns = "To {} {}, \n Your vehicle with licenseplate {} was clocked with speed above the permissible limit at {},{}\n Clocked speed {} \n Geo location {}, {} \n Time {}.".format(first_name,last_name,licensePlate,city,state,speed,longitude,latitude,iottimestamp)
-        print(message_sns)
-        try:
-            client.subscribe(TopicArn=topic_arn,Protocol='sms', Endpoint=e164phoneNumber)
-            client.publish(TopicArn=topic_arn,Message=message_sns )
-            print('Successfully delivered Speeding alarm message to {} '.format(phoneNumber))
-        except Exception:
-            print('SNS Message Delivery failure')
+message_sns = "To {} {}, \n Your vehicle with licenseplate {} was clocked with speed above the permissible limit at {},{}\n Clocked speed {} \n Geo location {}, {} \n Time {}.".format(first_name,last_name,licensePlate,city,state,speed,longitude,latitude,iottimestamp)
+
+logger.info(message_sns)
+
+try:
+  client.subscribe(TopicArn=topic_arn,Protocol='sms', Endpoint=e164phoneNumber)
+  client.publish(TopicArn=topic_arn,Message=message_sns )
+  logger.info('Successfully delivered Speeding alarm message to {} '.format(phoneNumber))
+except Exception:
+  logger.info('SNS Message Delivery failure')
 ```
 
 **End Result** SMS Message Received from AWS SNS on the phone number of the owner of speeding vehicle.
@@ -247,8 +255,8 @@ AWS Lambda Python Code Reads Stream Data and Publishes to SNS Topic,with Phone n
 Amazon EMR Spark script to write the Data to DynamoDb.
 
 ```scala
-     // write to dynamodb
-     speedingVehiclesDF.write
+// write to dynamodb
+speedingVehiclesDF.write
        .format("com.audienceproject.spark.dynamodb.datasource")
        .option("tableName", dynamoDbName)
        .option("region",regionName)
@@ -267,7 +275,7 @@ Amazon EMR Spark script to write the Data to DynamoDb.
 ![]({{ site.baseurl }}/images/awsbigdata/dynamodb-stream-lamdba.png)
 
 ```python
- record['dynamodb']
+record['dynamodb']
 # logger.info('DDB Record: ' + json.dumps(ddbRecord))
 parsedPayload = ddbRecord['NewImage']
 
@@ -289,9 +297,8 @@ Verify the Kinesis Firehose Data Put records using Kinesis Analytics
 - Recommended Courses 
   - [AWS Certified Data Analytics Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-big-data/)
   - [Stephane Maarek ](https://www.udemy.com/user/stephane-maarek/)
-
-  - [Frank Kane](https://www.udemy.com/user/frank-kane-2/)
-
+- [Frank Kane](https://www.udemy.com/user/frank-kane-2/)
+  - Scala Spark
   - https://rockthejvm.com
 
 
