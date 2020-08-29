@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MQTT Spark Streaming Integration Part 2
+title: MQTT Spark Streaming With Watermark Part 2
 tags: [iot,mqtt,spark,cassandra,structured,streaming,scala,jekyll]
 image: '/images/mqtt/mqtt-spark.png'
 ---

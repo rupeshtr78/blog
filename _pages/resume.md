@@ -14,23 +14,24 @@ title: Professional Summary
 
 **Professional** **Summary** 
 
-- More than 12 years of experience in implementing business applications with 8+ years of data architecture experience
-- Experienced in data engineering including databases, data integration, data mining, big data.
-- AWS Certified in Machine Learning Specialty. 
-- Exposure in building Big Data technologies and utilities( Hadoop, Map Reduce Framework, Hive, Sqoop, Pig , Hue,spark, zeppelin, yarn , kafka , zookeeper)
-- Knowledge of AWS Big Data Services IOT Core,Kinesis Streams, Firehose, Analytics, AWS RedShift,AWS EMR,AWS Lambda, AWS SNS,AWS Glue ETL,Crawler,Spark,DynamoDB,DynamoDB Streams,EC2 
-- Working Knowledge of Spark Core, Spark Streaming, Spark SQL for real time data processing. 
-- Experience in generating time series Forecast performing Hands-on data analytics , Building and maintaining the infrastructure and data pipelines required for  optimal extraction, transformation, and loading of data from a wide  variety of data sources.
-- Experience in multiple business domains spanning Clothing, Retail ,Manufacturing, Mobile , Paper Pulp, Paper Products and Automotive Aftermarket.
-- Experience with the business process activities and embed end-to-end model development and deployment into automated CICD workflows .
-- Ability to learn new tools quickly as needed to provide new ideas for solving problems
+- More than 12 years of experience in designing and implementing business applications. 
+- AWS Certified in Big Data and Machine Learning Specialty. 
+- Knowledge of Big Data technologies and utilities( Hadoop, Map Reduce Framework, Hive, Hue, spark, zeppelin, yarn , Kafka , zookeeper)
+- Knowledge of AWS Big Data Services IOT Core, Kinesis Streams, Firehose, Analytics, AWS RedShift, AWS EMR,AWS Lambda, AWS SNS,AWS Glue ,ETL, Crawler, Spark, Dynamo DB, Dynamo DB Streams,EC2 
+- Knowledge of Spark Core, Spark Streaming, and Spark SQL for real time data processing and integration with various JDBC sources and sinks.
+- Integrated Spark Streaming with Iot, MQTT, AWS Kinesis , Kafka Producers.
+- Integrated Spark data sources and sinks, Redshift, postgres, Dynamo Db , jdbc sources.
+- Experience in generating time series forecast performing Hands-on data analytics, Building and maintaining the infrastructure and data pipelines required for optimal extraction, transformation, and loading of data from a wide variety of data sources.
+- Experience in multiple business domains spanning Clothing, Retail, Manufacturing, Mobile, Paper Pulp, Paper Products and Automotive Aftermarket.
 - Knowledge in applying core Machine Learning methodologies: Regression, Naive Bayesian classifier, Clustering, Decision trees ,k-Nearest Neighbors, Principal Component Analysis, Data Imputation , Feature engineering techniques, Support Vector Machines.
-- Knowledge of ML frameworks Keras/Tensorflow , libraries in scikit-learn. Python data science libraries (Pandas, NumPy, Matplotlib).
+- Knowledge of ML frameworks Tensor flow, libraries in scikit-learn. Python data science libraries (Pandas, NumPy, Matplotlib).
 - Strong technical skills with in-depth understanding of systems and architectures of large-scale systems. Involved in architectural activities including hands-on design, configuration implementation of multiple large, multi-component solutions.
 - Data mining and analysis from OLTP/OLAP databases, querying very large datasets and writing SQL statements.
-- Experienced in working with large data structures, data modeling and related software architecture 
-  Ability to learn new tools quickly as needed to provide new ideas for solving problems.
+- Experienced in handling structured, semi-structured and unstructured data
+- Experienced in working with large data structures, data modeling and related software architecture Ability to learn new tools quickly as needed to provide new ideas for solving problems.
 - Involved with Agile practices and contributes to the team using Scrum and/or Kanban type activities 
+- Ability to see big picture and select the best course of action and Formulate innovative solutions to problems.
+- Ability to learn new tools quickly as needed to provide new ideas for solving problems
 
 ------
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AWS Big Data IOT
+title: AWS Big Data IOT With Spark Streaming
 tags: [iot,aws,spark,kinesis,redshift,emr,DynamoDB,jekyll]
 image: '/images/awsbigdata/awsbigdata.png'
 ---
 
 Business case :Use AWS Big data services to process streaming data from IOT device.
 
-An Iot device will publish the license plate and clocked speed of vehicles as data streams into AWS for further processing.
+An Iot device will publish the license plate and clocked speed of vehicles as data streams into AWS and Spark Streaming for further processing.
 
 AWS Spark job will filter the cars above speed limit ,Look up the vehicle owner information stored in Redshift data warehouse and eventually sends a SNS text message alert to the registered owner of the vehicle in real time.
 
@@ -20,7 +20,7 @@ AWS Services Used in this exercise.
 - AWS Lambda
 - AWS SNS
 - AWS Glue ETL , Crawler
-- Spark
+- Spark Streaming
 - DynamoDB , DynamoDB Streams
 - EC2
 
