@@ -156,13 +156,17 @@ val createTable: Create = SchemaBuilder.createTable("rtrnetwork","schematablecom
 
 **Insert into Table**
 
+Insert into table using QueryBuilder and ConsistencyLevel = ***QUORUM***
+
 ```scala
 import com.datastax.driver.core.querybuilder.QueryBuilder
 import com.datastax.driver.core.querybuilder.{Clause, Insert, Select}
+import com.datastax.driver.core.ConsistencyLevel
 
 val insertStmt = QueryBuilder.insertInto("rtrnetwork","users")
     .value("id",java.util.UUID.randomUUID())
     .value("username","Reva")
+    .setConsistencyLevel(ConsistencyLevel.QUORUM)
 
  session.execute(insertStmt)
 ```
@@ -177,6 +181,7 @@ val whereClause: Clause = QueryBuilder.eq("id",uid)
 val queryBuilder = QueryBuilder.select("id","username")
     .from("rtrnetwork","users")
     .where(whereClause)
+	.setConsistencyLevel(ConsistencyLevel.QUORUM)
 
 val result: ResultSet = session.execute(queryBuilder)
 
