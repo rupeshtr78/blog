@@ -227,6 +227,36 @@ val bindUsers: BoundStatement = boundedStatement.bind(rupesh.id,rupesh.username)
     println("Insert Bind Completed")
 ```
 
+**Using bindMarker()**
+
+```scala
+import com.datastax.driver.core.querybuilder.QueryBuilder.bindMarker
+
+val insertStmt = QueryBuilder.insertInto("rtrnetwork","users")
+      .value("id",bindMarker())
+      .value("username",bindMarker())
+
+val prepStmt = session.prepare(insertStmt)
+
+  val insertRandom= usersList.map(user => {
+    prepStmt.bind()
+      .setUUID("id",UUID.randomUUID())
+      .setString("username",s"${rand.alphanumeric.take(10).mkString("")}")
+      .setConsistencyLevel(ConsistencyLevel.QUORUM)
+  })
+
+val insertRandom: List[Statement] = List.range(1,10).map(user => {
+    prepStmt.bind()
+      .setUUID("id",UUID.randomUUID())
+      .setString("username",s"${rand.alphanumeric.take(10).mkString("")}")
+      .setConsistencyLevel(ConsistencyLevel.QUORUM)
+  })
+
+insertRandom.foreach(stmt => session.executeAsync(stmt))
+```
+
+
+
 **Verify Replication**
 
 We are using **NetworkTopologyStrategy** as strategy for replication.
