@@ -238,13 +238,6 @@ val insertStmt = QueryBuilder.insertInto("rtrnetwork","users")
 
 val prepStmt = session.prepare(insertStmt)
 
-  val insertRandom= usersList.map(user => {
-    prepStmt.bind()
-      .setUUID("id",UUID.randomUUID())
-      .setString("username",s"${rand.alphanumeric.take(10).mkString("")}")
-      .setConsistencyLevel(ConsistencyLevel.QUORUM)
-  })
-
 val insertRandom: List[Statement] = List.range(1,10).map(user => {
     prepStmt.bind()
       .setUUID("id",UUID.randomUUID())
