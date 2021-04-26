@@ -6,3 +6,7 @@ image: '/images/pages/about.png'
 
 Hi, my name is Rupesh Raghavan. I’m a independent Systems Analyst based in Houston. 
 I’ve worked with companies of all shapes and sizes, so contact me if you’d like to work together on your next project.
+
+    Email: rupesh@forsynet.com
+    GitHub: @rupeshtr78
+    Phone: 313-333-4433
