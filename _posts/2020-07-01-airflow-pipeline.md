@@ -15,6 +15,14 @@ In this exercise we will be using the following
 - Airflow
 - Cassandra
 
+Refer git for further details
+
+- [https://github.com/rupeshtr78/airflow_pipeline](https://github.com/rupeshtr78/airflow_pipeline)
+
+  
+
+  
+
 To run tasks parallelly in apache Airflow configure airflow with mysql so that it can run multiple threads.
 
 
