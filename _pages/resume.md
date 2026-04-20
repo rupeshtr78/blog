@@ -61,9 +61,9 @@ Experience
 
 **Employer** : ForSynet Inc
 
-**Role** : Demand  Forecasting ,Data Architect  ,Systems Architect ,  Client Facing Consultant 
+**Role** : Data Architect  ,Systems Architect ,  Client Facing Consultant , Self Employed
 
-**Dates** : Sep 2012 – Present 
+**Dates** : Sep 2012 – 2020 
 
 - Design and implementation of custom promotional campaign budgeting process
 - Designed and configured custom Predictive Trade planning and Promotion optimization. 
@@ -85,17 +85,6 @@ Experience
 - Design and implementation of Real time sales and operations planning constraining forecast for production capacity for Aluminum Cans business vertical. 
 - Designed solution for new product introduction by leveraging similar items 
 
-**Employer** : Chain Sys Corporation
-
-**Role** : Advanced Supply Chain Planning , Demantra Consultant.
-
-**Dates** : Sep 2006 – 2012
-
-- Business process mapping with all standard and customized modules. 
-- Design test scripts of all sub-process identified in assessment phase. 
-- Unit testing execution for each business process. 
-- Design and implement integration with multiple data sources. 
-- Successfully implemented complex shipping with Trips forecasting, multi delivery points, container management and lot/serialization. Freight charge calculation. 
 
 
 
